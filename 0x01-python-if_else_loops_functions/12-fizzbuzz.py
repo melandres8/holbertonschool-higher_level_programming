@@ -7,7 +7,7 @@ def fizzbuzz():
             if item != 100:
                 print('Buzz ', end="")
             else:
-                print('Buzz', end="")
+                print('Buzz ', end="")
         elif item % 3 == 0 and 5 != 0:
             print('Fizz ', end="")
         else:
