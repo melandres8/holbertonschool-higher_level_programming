@@ -2,4 +2,4 @@
 for item in range(90, 64, -1):
     if item % 2 == 0:
         item += 32
-    print(chr(item), end="")
+    print("{}".format(chr(item), end=""))
