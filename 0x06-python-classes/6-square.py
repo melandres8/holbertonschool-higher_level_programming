@@ -20,7 +20,8 @@ class Square():
         """
         if (position[1] < 0 or position[0] < 0 or len(position) != 2 or
                 not isinstance(position[0], int) or
-                not isinstance(position[1], int)):
+                not isinstance(position[1], int) or
+                not isinstance(position, tuple)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
@@ -72,10 +73,9 @@ class Square():
     def my_print(self):
         """Printing a Square and validating
         if the size is 0 or not"""
-        pos = self.__position
-        for item in range(pos[1]):
+        for item in range(self.__position[1]):
             print()
         for row in range(self.__size):
-            print("{}{}".format(' ' * pos[0], '#' * self.__size))
+            print("{}{}".format(' ' * self.__position[0], '#' * self.__size))
         if self.__size == 0:
             print()
