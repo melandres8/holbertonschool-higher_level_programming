@@ -3,11 +3,18 @@
 
 
 class Square():
+    """
+    Attributes:
+        attr1 (int): size of a square
+    """
     def __init__(self, size=0):
 
         """isinstance function checks if
         the object is an instance or subclass
         of the second argument
+
+        Args:
+            size (int): size of my square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
