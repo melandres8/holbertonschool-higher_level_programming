@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class Square:
+"""Square class"""
+
+
+class Square():
 
     """Constructor function defined using
     __init__"""

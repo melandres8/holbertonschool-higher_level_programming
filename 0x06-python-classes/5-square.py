@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class Square:
+"""Square class"""
+
+
+class Square():
 
     """__init__ constructor: Runs always when we
     create a new instance of a class"""
