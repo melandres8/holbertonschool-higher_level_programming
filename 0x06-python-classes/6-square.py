@@ -18,10 +18,11 @@ class Square():
             size (int): size of a square
             position (tuple): position
         """
-        if (position[1] < 0 or position[0] < 0 or len(position) != 2 or
-                not isinstance(position[0], int) or
-                not isinstance(position[1], int) or
-                not isinstance(position, tuple)):
+        if type(position) != tuple or len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(position[0]) != int or type(position[1]) != int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
@@ -48,6 +49,24 @@ class Square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def area(self):
+        """Calculating the area of a square"""
+        return int(self.__size) * int(self.__size)
+
+    def my_print(self):
+        """Printing a Square and validating
+        if the size is 0 or not"""
+        for item in range(self.__position[1]):
+            print()
+        for row in range(self.__size):
+            for item1 in range(self.__position[0]):
+                print(" ", end="")
+            for item2 in range(self.__size):
+                print("#", end="")
+            print()
+        if self.__size == 0:
+            print()
+
     @property
     def position(self):
         """Getter, retrieve the size of a square
@@ -65,17 +84,3 @@ class Square():
             position (tuple): position of a square
         """
         self.__position = value
-
-    def area(self):
-        """Calculating the area of a square"""
-        return int(self.__size) * int(self.__size)
-
-    def my_print(self):
-        """Printing a Square and validating
-        if the size is 0 or not"""
-        for item in range(self.__position[1]):
-            print()
-        for row in range(self.__size):
-            print("{}{}".format(' ' * self.__position[0], '#' * self.__size))
-        if self.__size == 0:
-            print()
