@@ -5,9 +5,10 @@
 class Square():
     """__init__ constructor: Runs always when we
     create a new instance of a class
+
     Attributes:
-    attr1 (int): is the size of a square
-    attr2 (tuple): position
+        attr1 (int): is the size of a square
+        attr2 (tuple): position
     """
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -17,6 +18,10 @@ class Square():
             size (int): size of a square
             position (tuple): position
         """
+        if (position[1] < 0 or position[0] < 0 or len(position) != 2 or
+                not isinstance(position[0], int) or
+                not isinstance(position[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
 
@@ -58,10 +63,6 @@ class Square():
         Args:
             position (tuple): position of a square
         """
-        if (value[1] < 0 or value[0] < 0 or not isinstance(value, tuple)
-                or len(value) != 2 or not isinstance(value[0], int) or
-                not isinstance(value[1], int)):
-            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
