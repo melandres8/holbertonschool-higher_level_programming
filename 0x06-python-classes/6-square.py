@@ -5,7 +5,6 @@
 class Square():
     """__init__ constructor: Runs always when we
     create a new instance of a class
-
     Attributes:
         attr1 (int): is the size of a square
         attr2 (tuple): position
@@ -13,7 +12,6 @@ class Square():
     def __init__(self, size=0, position=(0, 0)):
         """
         Inicializing my class with
-
         Args:
             size (int): size of a square
             position (tuple): position
@@ -23,9 +21,7 @@ class Square():
 
     @property
     def size(self):
-        """Getter, retrieve the size of a square
-        this methods is useful to handle with
-        privacity of our instance"""
+        """Getter"""
         return self.__size
 
     @size.setter
@@ -63,9 +59,7 @@ class Square():
 
     @property
     def position(self):
-        """Getter, retrieve the size of a square
-        this methods is useful to handle with
-        privacity of our instance"""
+        """Getter"""
         return self.__position
 
     @position.setter
@@ -73,11 +67,10 @@ class Square():
         """
         Handle the value of a size if
         is an integer or not
-
         Args:
             position (tuple): position of a square
         """
-        if type(value) != tuple or len(value) != 2:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(value[0]) != int or type(value[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
