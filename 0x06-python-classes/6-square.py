@@ -41,21 +41,22 @@ class Square():
 
     def area(self):
         """Calculating the area of a square"""
-        return int(self.__size) * int(self.__size)
+        return self.__size ** 2
 
     def my_print(self):
         """Printing a Square and validating
         if the size is 0 or not"""
-        for item in range(self.position[1]):
-            print()
-        for row in range(self.size):
-            for item1 in range(self.position[0]):
-                print(" ", end="")
-            for item2 in range(self.size):
-                print("#", end="")
-            print()
         if self.size == 0:
             print()
+        else:
+            for item in range(self.position[1]):
+                print()
+            for row in range(self.size):
+                for item1 in range(self.position[0]):
+                    print(" ", end="")
+                for item2 in range(self.size):
+                    print("#", end="")
+                print()
 
     @property
     def position(self):
