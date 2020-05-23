@@ -32,17 +32,13 @@ Como.
 esta?
 <BLANKLINE>
 
->>> text_indentation("""this: is? a. test        """)
-this:
+>>> text_indentation("""?     .:""")
+?
 <BLANKLINE>
-is?
+.
 <BLANKLINE>
-a.
+:
 <BLANKLINE>
-test        
-
->>> text_indentation("""     this is a test""")
-     this is a test
 
 >>> text_indentation(None)
 Traceback (most recent call last):
