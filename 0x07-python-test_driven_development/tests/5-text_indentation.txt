@@ -40,15 +40,19 @@ esta?
 :
 <BLANKLINE>
 
+>>> text_indentation("""     test. issues: new?""")
+test.
+<BLANKLINE>
+issues:
+<BLANKLINE>
+new?
+<BLANKLINE>
+
 >>> text_indentation(None)
 Traceback (most recent call last):
 TypeError: text must be a string
 
 >>> text_indentation(34)
-Traceback (most recent call last):
-TypeError: text must be a string
-
->>> text_indentation("""""")
 Traceback (most recent call last):
 TypeError: text must be a string
 
