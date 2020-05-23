@@ -1,0 +1,51 @@
+===================================
+Testing the ``add_integer`` module.
+===================================
+
+=============================
+Using ``add_integer`` module.
+=============================
+
+
+importing the add_integer module from ``0-add_integer.py``
+>>> add_integer = __import__('0-add_integer').add_integer
+
+add positive numbers.
+>>> add_integer(2, 3)
+5
+
+add positive and floating numbers.
+>>> add_integer(2.0, 8)
+10
+
+add positive and negative numbers.
+>>> add_integer(50, -90)
+-40
+
+add two negative numbers.
+>>> add_integer(-30, -20)
+-50
+
+add a string and an integer.
+>>> add_integer("aad", 90)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+add with only one number
+>>> add_integer(90)
+188
+
+add none values arguments
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+add two strings
+>>> add_integer("!", "hola")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+if b is a string
+>>> add_integer(45, "add")
+Traceback (most recent call last):
+TypeError: b must be an integer

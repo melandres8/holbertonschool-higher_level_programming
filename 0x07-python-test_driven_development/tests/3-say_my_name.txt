@@ -1,0 +1,52 @@
+===================================
+Testing the ``say_my_name`` module.
+===================================
+
+=============================
+Using ``say_my_name`` module.
+=============================
+
+
+importing the matrix_divided module from ``3-say_my_name.py``
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing:
+
+>>> say_my_name("David", "Corredor")
+My name is David Corredor
+
+>>> say_my_name("Brand", "")
+My name is Brand 
+
+>>> say_my_name("OscAr",)
+My name is OscAr 
+
+>>> say_my_name('', '')
+My name is  
+
+>>> say_my_name('')
+My name is  
+
+>>> say_my_name("", "Nicolás")
+My name is  Nicolás
+
+
+>>> say_my_name(13, 14)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Cardi", 14)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name([1, 2, 3], "hola")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Melkin", "Andres", "Mosquera")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(2)
+Traceback (most recent call last):
+TypeError: first_name must be a string
