@@ -26,7 +26,7 @@ def text_indentation(text):
             if case is False:
                 print(item, end="")
             else:
-                if item in ' ':
+                if item in ' \t':
                     pass
                 else:
                     print(item, end='')
