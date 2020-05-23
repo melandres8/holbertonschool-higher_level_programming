@@ -19,6 +19,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(), None)
         self.assertEqual(max_integer([0, 0, 0]), 0)
         self.assertEqual(max_integer([7218332, -1000, -123, -20]), 7218332)
+        self.assertNotIn(max_integer([5, 4, 6]), [9, 4, 2])
 
 if __name__ == '__main__':
     unittest.main()
