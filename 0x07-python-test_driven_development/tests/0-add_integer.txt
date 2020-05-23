@@ -49,3 +49,20 @@ if b is a string
 >>> add_integer(45, "add")
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+adding passing only floats
+>>> add_integer(float(13), float(5))
+18
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+add two positive floats
+>>> add_integer(7.5, 98.5)
+105
+
+missing both args
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
