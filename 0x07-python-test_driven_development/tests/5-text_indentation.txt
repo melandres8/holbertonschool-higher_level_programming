@@ -1,13 +1,13 @@
-===================================
+========================================
 Testing the ``text_indentation`` module.
-===================================
+========================================
 
-=============================
+==================================
 Using ``text_indentation`` module.
-=============================
+==================================
 
 
-importing the matrix_divided module from ``4-print_square.py``
+importing the matrix_divided module from ``5-text_indentation.py``
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Testing:
