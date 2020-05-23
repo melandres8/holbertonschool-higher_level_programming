@@ -20,14 +20,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0, 0, 0]), 0)
         self.assertEqual(max_integer([7218332, -1000, -123, -20]), 7218332)
 
-    def test_values1(self):
-        with self.assertRaises(TypeError):
-            max_integer(True, False)
-
-    def test_values2(self):
-        with self.assertRaises(TypeError):
-            max_integer(1, "epa", 3, 7)
-
-    def test_values3(self):
-        with self.assertRaises(TypeError):
-            max_integer("hola")
+if __name__ == '__main__':
+    unittest.main()
