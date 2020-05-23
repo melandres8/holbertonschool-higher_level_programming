@@ -24,7 +24,7 @@ def text_indentation(text):
             pass
         else:
             string += i
-        if i == '.' or i == '?' or i == ':':
+        if i in '.:?':
             string = string.strip(" ")
             print(string, end="")
             print("\n")
