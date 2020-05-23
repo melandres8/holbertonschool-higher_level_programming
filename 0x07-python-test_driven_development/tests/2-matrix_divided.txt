@@ -57,3 +57,12 @@ validating if matrix is not a list
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+missing two args
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+float inf
+>>> matrix_divided([[3, 4, 5], [4, 6, 3]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
