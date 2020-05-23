@@ -12,6 +12,8 @@ def text_indentation(text):
 
         Args:
             text: (string) Given text
+        Raises:
+            TypeError: "text must be a string"
     """
 
     if (not isinstance(text, str) or len(text) < 1
@@ -26,7 +28,7 @@ def text_indentation(text):
             if case is False:
                 print(item, end="")
             else:
-                if item in ' \t':
+                if item == '\t' or item == ' ':
                     pass
                 else:
                     print(item, end='')
