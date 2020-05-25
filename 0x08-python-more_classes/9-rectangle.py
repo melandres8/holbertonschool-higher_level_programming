@@ -80,9 +80,9 @@ class Rectangle():
         return rect_2
 
     @classmethod
-    """Implementing a classmethod
-    """
     def square(cls, size=0):
+        """Implementing a classmethod
+        """
         return cls(size, size)
 
     def __str__(self):
