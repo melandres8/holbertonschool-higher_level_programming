@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""Implementing the super() method and more inheritance"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """ Square class
+    """
     def __init__(self, size):
         """Constructor method
 
@@ -14,4 +17,6 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
+        """ Returning the string representation
+        """
         return "[Square] {}/{}".format(self.__size, self.__size)
