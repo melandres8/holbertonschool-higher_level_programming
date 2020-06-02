@@ -1,6 +1,7 @@
 ============================
 The ``7-base_geometry`` module
 ============================
+
 =======================
 Using ``7-base_geometry``
 =======================
@@ -96,3 +97,13 @@ If name is not a string will be printed
 >>> base.integer_validator(23, {'a': 2})
 Traceback (most recent call last):
 TypeError: 23 must be an integer
+
+call method integer_validator invalid
+>>> base.integer_validator("size", True)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+call method integer_validator invalid
+>>> base.integer_validator("size", (98,))
+Traceback (most recent call last):
+TypeError: size must be an integer
