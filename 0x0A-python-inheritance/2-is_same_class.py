@@ -4,6 +4,8 @@ is an instance of a class or not"""
 
 
 def is_same_class(obj, a_class):
+    """ Verifying if is the same object
+    """
     if type(obj) is a_class:
         return True
     else:
