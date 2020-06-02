@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Applying inheritance and super() method
+"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
