@@ -5,6 +5,8 @@ inherited from specified class otherwise False"""
 
 
 def is_kind_of_class(obj, a_class):
+    """ Verifying if is same class or inherit from
+    """
     if isinstance(obj, a_class):
         return True
     else:
