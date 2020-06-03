@@ -13,4 +13,3 @@ def read_lines(filename="", nb_lines=0):
                 nb_lines -= 1
         else:
             print(file.read(), end='')
-            print()
