@@ -7,6 +7,4 @@ def read_file(filename=""):
     """Print an entire file text
     """
     with open(filename, 'r') as file:
-        for line in file:
-            print(line, end='')
-        print()
+        print(file.read(), end='')
