@@ -9,4 +9,4 @@ def save_to_json_file(my_obj, filename):
     """Function
     """
     with open(filename, 'w') as file:
-        return json.dumps(my_obj, file)
+        file.write(json.dumps(my_obj))
