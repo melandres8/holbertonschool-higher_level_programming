@@ -7,5 +7,4 @@ def write_file(filename="", text=""):
     """ Writing text into a text file
     """
     with open(filename, 'w') as file:
-        file.write(text)
-        return text
+        return file.write(text)
