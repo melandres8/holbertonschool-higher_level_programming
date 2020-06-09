@@ -2,6 +2,7 @@
 """ Base module
 """
 import json
+import csv
 from os import path
 
 
@@ -83,3 +84,36 @@ class Base():
         with open(filename, 'r') as file:
             l_dic = Base.from_json_string(file.readline())
         return list(cls.create(**dic) for dic in l_dic)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ serializes and deserializes in CSV
+        """
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'w') as file:
+            if list_objs is None or list_objs == []:
+                file.write('[]')
+            else:
+                if cls.__name__ == 'Square':
+                    insts = ['id', 'size', 'x', 'y']
+                elif cls.__name__ == 'Rectangle':
+                    insts = ['id', 'width', 'height', 'x', 'y']
+                dic = csv.DictWriter(file, fieldnames=insts)
+                list(dic.writerow(obj.to_dictionary()) for obj in list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Return a list of instances
+            in a csv file
+        """
+        filename = cls.__name__ + '.csv'
+        if not path.exists(filename):
+            return []
+        with open(filename, 'r') as file:
+            if cls.__name__ == 'Square':
+                insts = ['id', 'size', 'x', 'y']
+            elif cls.__name__ == 'Rectangle':
+                insts = ['id', 'width', 'height', 'x', 'y']
+            dic = csv.DictReader(file, fieldnames=insts)
+            ls_dics = list({k: int(v) for k, v in i.items()} for i in dic)
+        return list(cls.create(**ls) for ls in ls_dics)
