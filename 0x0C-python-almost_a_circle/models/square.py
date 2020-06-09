@@ -33,9 +33,8 @@ class Square(Rectangle):
             for idx, attr in enumerate(args):
                 setattr(self, inst[idx], attr)
 
-    @classmethod
     def to_dictionary(self):
         """ Dictionary representation
         """
-        inst = ['id', 'width', 'height', 'x', 'y']
+        inst = ['id', 'size', 'x', 'y']
         return {i: getattr(self, i) for i in inst}
