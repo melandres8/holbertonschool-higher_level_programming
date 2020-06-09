@@ -20,7 +20,7 @@ class Base():
 
     @property
     def id(self):
-        """ getter """ 
+        """ getter """
         return self.__id
 
     @id.setter
