@@ -2,6 +2,7 @@
 """ Base module
 """
 import json
+from os import path
 
 
 class Base():
@@ -76,8 +77,9 @@ class Base():
     def load_from_file(cls):
         """ returns a list of instances
         """
-        with open(cls.__name__ + '.json', 'r') as file:
-            if file:
+        filename = cls.__name__ + '.json'
+        with open(filename, 'r') as file:
+            if path.exists(filename):
                 l_dic = Base.from_json_string(file.read())
                 return list(cls.create(**dic) for dic in l_dic)
             else:
