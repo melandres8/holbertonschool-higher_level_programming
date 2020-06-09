@@ -78,9 +78,8 @@ class Base():
         """ returns a list of instances
         """
         filename = cls.__name__ + '.json'
+        if not path.exists(filename):
+            return []
         with open(filename, 'r') as file:
-            if path.exists(filename):
-                l_dic = Base.from_json_string(file.readline())
-                return [cls.create(**dic) for dic in l_dic]
-            else:
-                return []
+            l_dic = Base.from_json_string(file.readline())
+        return list(cls.create(**dic) for dic in l_dic)
