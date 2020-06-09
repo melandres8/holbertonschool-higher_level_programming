@@ -80,7 +80,7 @@ class Base():
         filename = cls.__name__ + '.json'
         with open(filename, 'r') as file:
             if path.exists(filename):
-                l_dic = Base.from_json_string(file.read())
-                return list(cls.create(**dic) for dic in l_dic)
+                l_dic = Base.from_json_string(file.readline())
+                return [cls.create(**dic) for dic in l_dic]
             else:
                 return []
