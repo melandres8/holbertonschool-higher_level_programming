@@ -8,5 +8,5 @@ def find_peak(list_of_integers):
     """
     if list_of_integers == []:
         return None
-    s = sorted(list_of_integers)
-    return s[-1]
+    list_of_integers.sort()
+    return list_of_integers[-1]
