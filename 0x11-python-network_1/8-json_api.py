@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if not data:
             print('Not result')
         else:
-            print('[{}] {}'.format(data['id'], data['name']))
+            print('[{}] {}'.format(data.get('id'), data.get('name')))
     except Exception:
         print('Not a valid JSON')
