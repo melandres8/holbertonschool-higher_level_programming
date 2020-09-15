@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 // script that prints a square
 const myNumber = parseInt(process.argv[2]);
 let x;
