@@ -6,7 +6,7 @@ let myArray;
 if (args.length < 3 || args.length === 3) {
   console.log(0);
 } else {
-  myArray = args.slice(2);
+  myArray = args.splice(2);
   myArray.sort(function (a, b) {
     return b - a;
   });
