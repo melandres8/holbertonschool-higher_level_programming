@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 // script that searches the second biggest integer in the list of arguments.
 const args = process.argv;
 let myArray;
