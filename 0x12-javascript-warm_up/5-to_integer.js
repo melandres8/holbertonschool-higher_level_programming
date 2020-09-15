@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 // Convert from string to integer
 const myNumber = parseInt(process.argv[2]);
 
