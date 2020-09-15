@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 // script that computes and prints a factorial
 const myNumber = parseInt(process.argv[2]);
 
